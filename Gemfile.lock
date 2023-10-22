@@ -197,6 +197,8 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.1)
+    shoulda-matchers (5.3.0)
+      activesupport (>= 5.2.0)
     simplecov (0.17.0)
       docile (~> 1.1)
       json (>= 1.8, < 3)
@@ -240,13 +242,14 @@ DEPENDENCIES
   debug
   dotenv-rails (= 2.7.6)
   factory_bot_rails (= 6.2.0)
-  faker
+  faker (= 3.2.1)
   importmap-rails
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
   rspec-rails (= 6.0.3)
+  shoulda-matchers
   simplecov (= 0.17.0)
   sprockets-rails
   stimulus-rails
