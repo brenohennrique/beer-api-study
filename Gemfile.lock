@@ -89,6 +89,13 @@ GEM
       dotenv (= 2.7.6)
       railties (>= 3.2)
     erubi (1.12.0)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
+    faker (3.2.1)
+      i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -232,6 +239,8 @@ DEPENDENCIES
   database_cleaner (= 2.0.2)
   debug
   dotenv-rails (= 2.7.6)
+  factory_bot_rails (= 6.2.0)
+  faker
   importmap-rails
   jbuilder
   pg (~> 1.1)

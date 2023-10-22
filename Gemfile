@@ -55,6 +55,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 
   gem 'rspec-rails', '6.0.3'
+  gem 'factory_bot_rails', '6.2.0'
 end
 
 group :development do
@@ -71,4 +72,5 @@ end
 group :test do
   gem 'database_cleaner', '2.0.2'
   gem 'simplecov', '0.17.0', require: false
+  gem 'faker', '3.2.1'
 end
