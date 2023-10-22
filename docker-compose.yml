@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  api:
+    container_name: beer_api
+    build:
+      context: .
+      dockerfile: resources/Docker/Dockerfile
+      args:
+        buildno: 1
+    command: bundle exec rails s -b '0.0.0.0'
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/beer-api
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    links:
+      - db
+    env_file:
+      - .env
+
+  db:
+    container_name: beer_db
+    image: postgres:11.2
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${BEER_API_DATABASE_USER}
+      - POSTGRES_PASSWORD=${BEER_API_DATABASE_PASS}
